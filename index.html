@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>취업규칙</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0; }
+
+        body {
+            font-family: 'Pretendard', 'Inter', -apple-system, 'Noto Sans KR', sans-serif;
+            margin: 0; padding: 0;
+            background-color: #F9F9F9;
+            color: #191919;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm 25mm;
+            margin: 10mm auto;
+            background-color: #fff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            box-sizing: border-box;
+        }
+
+        @media print {
+            body { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; color-adjust: exact; }
+            .container { margin: 0; box-shadow: none; padding: 20mm 25mm; page-break-inside: auto; }
+            .chapter { page-break-inside: avoid; }
+        }
+
+        /* --- Header --- */
+        .header { text-align: center; margin-bottom: 24px; }
+        h1 {
+            font-size: 26px; font-weight: 700; letter-spacing: -0.5px;
+            margin: 0; padding: 0 0 18px 0;
+            color: #191919; border-bottom: 2px solid #191919;
+        }
+        .subtitle { font-size: 13px; color: #A3A3A3; margin-top: 12px; }
+
+        /* --- Doc Header (Logo + Meta) --- */
+        .doc-header {
+            display: flex; justify-content: space-between; align-items: flex-start;
+            padding-bottom: 20px; border-bottom: 1px solid #E5E5E5; margin-bottom: 28px;
+        }
+        .doc-logo {
+            font-family: 'Inter', sans-serif; font-weight: 900; font-size: 20px;
+            letter-spacing: -0.5px; color: #191919;
+        }
+        .doc-logo .dot { color: #2BF5A0; }
+        .doc-meta {
+            font-family: 'Inter', sans-serif; font-size: 11px; color: #A3A3A3;
+            text-align: right; line-height: 1.6;
+        }
+
+        /* --- Chapter --- */
+        .chapter { margin-bottom: 18px; }
+        .chapter-title {
+            font-size: 15px; font-weight: 600; color: #191919;
+            margin: 18px 0 10px 0; padding: 6px 0;
+            border-bottom: 2px solid #191919;
+        }
+
+        /* --- Article --- */
+        .article { margin-bottom: 10px; }
+        .article-title {
+            font-size: 13.5px; font-weight: 600; color: #191919;
+            margin-bottom: 4px;
+        }
+        .article-content {
+            font-size: 12.5px; line-height: 1.55; color: #333;
+            padding-left: 14px;
+        }
+        .article-content div { margin-bottom: 2px; }
+        .article-content ul { margin: 4px 0; padding-left: 18px; }
+        .article-content li { margin-bottom: 2px; color: #333; }
+
+        /* --- Note box --- */
+        .note-box {
+            background: #F9F9F9; border-left: 3px solid #191919;
+            padding: 10px 14px; margin: 8px 0;
+            font-size: 12px; border-radius: 6px;
+        }
+
+        /* --- TOC --- */
+        .toc {
+            margin: 16px 0 28px 0;
+            padding: 16px 20px;
+            background-color: #FAFAFA;
+            border-radius: 8px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .toc-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .toc-item { font-size: 12.5px; line-height: 1.8; color: #555; }
+
+        .footer-info {
+            margin-top: 28px; padding-top: 14px;
+            border-top: 1px solid #E5E5E5;
+            font-size: 12px; color: #999; text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="doc-header">
+            <div class="doc-logo">Lukuku<span class="dot">.</span></div>
+            <div class="doc-meta">Employment Rules<br>루쿠쿠 주식회사</div>
+        </div>
+
+        <div class="header">
+            <h1>취업규칙</h1>
+            <div class="subtitle">루쿠쿠 주식회사 | 2026년 4월 시행</div>
+        </div>
+
+        <div class="toc">
+            <div class="toc-title">목 차</div>
+            <div class="toc-item">제1장 총칙 (제1조 ~ 제4조)</div>
+            <div class="toc-item">제2장 채용 (제5조 ~ 제8조)</div>
+            <div class="toc-item">제3장 근로시간·휴일·휴가 (제9조 ~ 제16조)</div>
+            <div class="toc-item">제4장 임금 (제17조 ~ 제21조)</div>
+            <div class="toc-item">제5장 모성보호 및 일·가정 양립 지원 (제22조 ~ 제26조)</div>
+            <div class="toc-item">제6장 안전보건 (제27조 ~ 제28조)</div>
+            <div class="toc-item">제7장 퇴직·해고 (제29조 ~ 제32조)</div>
+            <div class="toc-item">제8장 퇴직급여 (제33조)</div>
+            <div class="toc-item">제9장 표창 및 징계 (제34조 ~ 제37조)</div>
+            <div class="toc-item">제10장 직장 내 괴롭힘 금지 (제38조 ~ 제40조)</div>
+            <div class="toc-item">제11장 직장 내 성희롱 예방 (제41조 ~ 제43조)</div>
+            <div class="toc-item">제12장 비밀유지 및 지식재산권 (제44조 ~ 제46조)</div>
+            <div class="toc-item">제13장 보칙 (제47조 ~ 제49조)</div>
+            <div class="toc-item">부칙</div>
+        </div>
+
+        <!-- 제1장 총칙 -->
+        <div class="chapter">
+            <div class="chapter-title">제 1 장 총 칙</div>
+
+            <div class="article">
+                <div class="article-title">제 1 조 (목적)</div>
+                <div class="article-content">
+                    본 규칙은 루쿠쿠 주식회사(이하 '회사')와 직원의 근로조건 및 복무에 관한 사항을 정함으로써 직원의 권익 보호와 회사의 원활한 운영을 도모하는 것을 목적으로 한다.
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 2 조 (적용 범위)</div>
+                <div class="article-content">
+                    <div>① 본 규칙은 회사에 근무하는 모든 직원에게 적용한다.</div>
+                    <div>② 본 규칙에 정하지 아니한 사항은 근로기준법 등 관련 법령에 따른다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 3 조 (용어의 정의)</div>
+                <div class="article-content">
+                    <div>① "직원"이란 제5조의 채용 절차를 거쳐 회사와 근로계약을 체결한 자를 말한다.</div>
+                    <div>② "수습직원"이란 채용 후 일정 기간 업무 적합성을 평가받는 자를 말한다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 4 조 (규칙의 게시)</div>
+                <div class="article-content">
+                    회사는 본 규칙을 직원이 자유롭게 열람할 수 있는 장소(사내 온라인 문서 시스템 포함)에 항상 게시하거나 갖추어 둔다.
+                </div>
+            </div>
+        </div>
+
+        <!-- 제2장 채용 -->
+        <div class="chapter">
+            <div class="chapter-title">제 2 장 채 용</div>
+
+            <div class="article">
+                <div class="article-title">제 5 조 (채용)</div>
+                <div class="article-content">
+                    <div>① 회사는 직무 수행에 필요한 자격과 능력을 갖춘 자를 채용한다.</div>
+                    <div>② 채용 시 성별, 국적, 종교, 사회적 신분 등을 이유로 차별하지 아니한다.</div>
+                    <div>③ 다음 각 호에 해당하는 경우 채용을 취소할 수 있다.</div>
+                    <ul>
+                        <li>채용 서류에 허위 사실을 기재한 경우</li>
+                        <li>채용 건강검진 결과 업무 수행이 곤란한 경우</li>
+                        <li>법률에 의해 취업이 제한되는 경우</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 6 조 (채용 서류)</div>
+                <div class="article-content">
+                    <div>신규 채용 시 다음 서류를 제출하여야 한다.</div>
+                    <ul>
+                        <li>이력서 및 자기소개서</li>
+                        <li>최종 학교 졸업(예정) 증명서</li>
+                        <li>주민등록등본</li>
+                        <li>기타 회사가 필요로 하는 서류</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 7 조 (근로계약 체결)</div>
+                <div class="article-content">
+                    <div>① 회사는 채용 시 근로계약서를 서면으로 작성하여 직원에게 교부한다.</div>
+                    <div>② 근로계약서에는 임금의 구성항목·계산방법·지급방법, 소정근로시간, 휴일, 연차유급휴가에 관한 사항을 명시한다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 7 조의2 (개인정보 수집 및 이용)</div>
+                <div class="article-content">
+                    <div>① 회사는 인사관리, 급여 지급, 4대 보험 가입 등의 목적으로 직원의 개인정보를 수집·이용한다.</div>
+                    <div>② 수집 항목, 이용 목적, 보유 기간 등 세부 사항은 채용 시 별도의 개인정보 처리 동의서에 따른다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 8 조 (수습 기간)</div>
+                <div class="article-content">
+                    <div>① 신규 채용 직원에 대하여 근로계약서에서 정한 바에 따라 수습 기간을 둘 수 있다.</div>
+                    <div>② 수습 기간 중 업무 적합성이 현저히 부족하다고 인정되는 경우 회사는 본 채용을 거부할 수 있다. 이 경우 해고 사유와 해고 시기를 서면으로 통지한다.</div>
+                    <div>③ 수습 기간 중 근로조건은 근로계약서에서 정한 바에 따른다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 제3장 근로시간·휴일·휴가 -->
+        <div class="chapter">
+            <div class="chapter-title">제 3 장 근로시간·휴일·휴가</div>
+
+            <div class="article">
+                <div class="article-title">제 9 조 (근로시간)</div>
+                <div class="article-content">
+                    <div>① 소정근로시간은 휴게시간을 제외하고 1일 8시간, 1주 40시간으로 한다.</div>
+                    <div>② 회사는 시차출퇴근제를 시행하며, 표준 근로시간은 다음과 같다.</div>
+                    <ul>
+                        <li>출근시간 : 09시 00분 ~ 10시 00분 (직원 선택)</li>
+                        <li>퇴근시간 : 18시 00분 ~ 19시 00분 (출근시간에 따라 결정)</li>
+                        <li>1일 실근로시간 : 8시간</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 10 조 (휴게시간)</div>
+                <div class="article-content">
+                    <div>① 근로시간 중 12시 00분부터 13시 00분까지 1시간을 휴게시간으로 한다.</div>
+                    <div>② 휴게시간은 직원이 자유롭게 이용할 수 있다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 11 조 (탄력적 근로시간제)</div>
+                <div class="article-content">
+                    <div>① 회사는 근로기준법 제51조 제1항에 따라 2주 이내를 단위기간으로 하는 탄력적 근로시간제를 상시 시행한다. 단위기간을 평균하여 1주간의 근로시간은 40시간을 초과할 수 없으며, 특정 주의 근로시간은 48시간을 초과할 수 없다.</div>
+                    <div>② 업무상 필요한 경우 회사는 근로기준법 제51조에 따라 3개월 이내의 단위기간을 정하여 탄력적 근로시간제를 시행할 수 있다. 이 경우 근로자대표와 별도 서면합의를 체결한다.</div>
+                    <div>③ 제2항의 경우 특정 주의 근로시간은 52시간, 특정 일의 근로시간은 12시간을 각각 초과할 수 없다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 12 조 (연장·야간·휴일 근로)</div>
+                <div class="article-content">
+                    <div>① 업무상 필요한 경우 직원의 동의를 얻어 1주 12시간 한도 내에서 연장근로를 시킬 수 있다.</div>
+                    <div>② 연장·야간(22시~06시)·휴일 근로에 대하여는 통상임금의 50%를 가산하여 지급한다.</div>
+                    <div>③ 근로기준법 제57조에 따라 근로자대표와의 서면합의를 거쳐 가산수당에 상응하는 보상휴가를 부여하거나, 상여금으로 보상할 수 있다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 13 조 (휴일)</div>
+                <div class="article-content">
+                    <div>① 주휴일은 매주 일요일로 한다.</div>
+                    <div>② 근로자의 날(5월 1일)은 유급휴일로 한다.</div>
+                    <div>③ 관공서의 공휴일 및 대체공휴일은 유급휴일로 한다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 14 조 (연차유급휴가)</div>
+                <div class="article-content">
+                    <div>① 1년간 80% 이상 출근한 직원에게 15일의 연차유급휴가를 부여한다.</div>
+                    <div>② 계속 근로연수가 1년 미만인 직원에게는 1개월 개근 시 1일의 유급휴가를 부여한다.</div>
+                    <div>③ 3년 이상 계속 근로한 직원에게는 최초 1년을 초과하는 계속 근로연수 매 2년에 대하여 1일을 가산하되, 총 휴가일수는 25일을 한도로 한다.</div>
+                    <div>④ 연차유급휴가는 직원의 청구에 따라 부여하되, 사업 운영에 막대한 지장이 있는 경우 그 시기를 변경할 수 있다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 15 조 (연차휴가 사용 촉진)</div>
+                <div class="article-content">
+                    <div>① 회사는 근로기준법 제61조에 따라 연차유급휴가의 사용을 촉진할 수 있다.</div>
+                    <div>② 사용 촉진 조치에도 불구하고 직원이 휴가를 사용하지 아니한 경우 회사는 미사용 휴가에 대한 보상 의무를 지지 아니한다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 16 조 (특별휴가)</div>
+                <div class="article-content">
+                    <div>회사는 다음 각 호의 경우 유급 특별휴가를 부여할 수 있다.</div>
+                    <ul>
+                        <li>본인 결혼 : 5일</li>
+                        <li>배우자 출산 : 제25조에 따른다</li>
+                        <li>부모, 배우자 부모 사망 : 5일</li>
+                        <li>자녀, 형제자매 사망 : 3일</li>
+                        <li>기타 회사가 인정하는 경우</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 제4장 임금 -->
+        <div class="chapter">
+            <div class="chapter-title">제 4 장 임 금</div>
+
+            <div class="article">
+                <div class="article-title">제 17 조 (임금의 구성)</div>
+                <div class="article-content">
+                    <div>임금은 기본급, 식대(비과세) 및 기타 회사가 정하는 수당으로 구성한다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 18 조 (임금의 계산 및 지급)</div>
+                <div class="article-content">
+                    <div>① 임금 계산 기간은 매월 1일부터 말일까지로 한다.</div>
+                    <div>② 임금은 매월 말일에 직원의 급여 계좌로 지급한다(후급). 지급일이 휴일인 경우 직전 영업일에 지급한다.</div>
+                    <div>③ 중도입사자 및 퇴사자는 일할 계산한다.</div>
+                    <div>④ 사회보험료 및 근로소득세 등 제세공과금은 원천징수 후 지급한다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 19 조 (임금정보 관리)</div>
+                <div class="article-content">
+                    <div>① 임금 관련 정보는 회사의 인사 기밀에 해당하며, 직원은 이를 타인에게 공유하지 않도록 유의한다.</div>
+                    <div>② 임금 정보의 확인이 필요한 경우 회사 대표자를 통해 확인한다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 20 조 (임금명세서)</div>
+                <div class="article-content">
+                    회사는 임금 지급 시 임금의 구성항목, 계산방법, 공제 내역 등을 기재한 임금명세서를 직원에게 교부한다. 이메일, 업무용 메신저 등 전자적 방법으로 교부할 수 있다.
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 21 조 (휴업수당)</div>
+                <div class="article-content">
+                    회사의 귀책사유로 휴업하는 경우 평균임금의 70% 이상의 휴업수당을 지급한다.
+                </div>
+            </div>
+        </div>
+
+        <!-- 제5장 모성보호 및 일·가정 양립 -->
+        <div class="chapter">
+            <div class="chapter-title">제 5 장 모성보호 및 일·가정 양립 지원</div>
+
+            <div class="article">
+                <div class="article-title">제 22 조 (산전후휴가)</div>
+                <div class="article-content">
+                    <div>① 임신 중인 직원에게 출산 전후를 통하여 90일(다태아 120일)의 산전후휴가를 부여하되, 출산 후 45일(다태아 60일) 이상이 되도록 한다.</div>
+                    <div>② 유산·사산 위험이 있는 직원은 산전후휴가를 분할하여 사용할 수 있다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 23 조 (육아휴직)</div>
+                <div class="article-content">
+                    <div>① 만 12세 이하 또는 초등학교 6학년 이하의 자녀가 있는 직원이 신청하는 경우 육아휴직을 부여한다.</div>
+                    <div>② 육아휴직 기간은 자녀 1명당 1년 6개월 이내로 한다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 24 조 (육아기 근로시간 단축)</div>
+                <div class="article-content">
+                    직원이 육아기 근로시간 단축을 신청하는 경우 이를 허용한다. 단축 후 근로시간은 주당 15시간 이상 35시간 이내로 한다.
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 25 조 (배우자 출산휴가)</div>
+                <div class="article-content">
+                    직원의 배우자가 출산한 경우 20일의 출산휴가를 부여한다. 최초 10일은 유급으로 하고, 나머지 10일은 고용보험법에 따라 지원한다.
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 26 조 (가족돌봄휴직·휴가)</div>
+                <div class="article-content">
+                    <div>① 직원이 가족의 질병, 사고, 노령 등으로 가족돌봄휴직을 신청하는 경우 이를 허용한다. 기간은 연간 최장 90일로 한다.</div>
+                    <div>② 가족돌봄 등을 위한 긴급한 사유가 있는 경우 연간 10일의 가족돌봄휴가를 사용할 수 있다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 제6장 안전보건 -->
+        <div class="chapter">
+            <div class="chapter-title">제 6 장 안전보건</div>
+
+            <div class="article">
+                <div class="article-title">제 27 조 (안전보건 의무)</div>
+                <div class="article-content">
+                    <div>① 회사는 직원의 안전과 건강을 유지·증진하기 위하여 산업안전보건법에서 정하는 바를 준수한다.</div>
+                    <div>② 직원은 회사의 안전보건 관련 지시를 준수하여야 한다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 28 조 (건강검진)</div>
+                <div class="article-content">
+                    회사는 직원에 대하여 관련 법령에 따라 정기적으로 건강검진을 실시한다.
+                </div>
+            </div>
+        </div>
+
+        <!-- 제7장 퇴직·해고 -->
+        <div class="chapter">
+            <div class="chapter-title">제 7 장 퇴직·해고</div>
+
+            <div class="article">
+                <div class="article-title">제 28 조의2 (휴직)</div>
+                <div class="article-content">
+                    <div>① 직원이 다음 각 호의 사유로 휴직을 원하는 경우 회사의 승인을 얻어 휴직할 수 있다.</div>
+                    <ul>
+                        <li>업무 외 부상 또는 질병으로 장기 요양이 필요한 경우</li>
+                        <li>기타 회사가 인정하는 사유</li>
+                    </ul>
+                    <div>② 휴직 기간은 1년 이내로 하며 무급으로 한다.</div>
+                    <div>③ 휴직 기간은 근속연수에 산입하지 아니한다.</div>
+                    <div>④ 휴직 기간 만료 후 복직하지 아니하는 경우 자연 퇴직으로 처리한다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 29 조 (퇴직)</div>
+                <div class="article-content">
+                    <div>직원이 다음 각 호에 해당하는 경우 퇴직으로 처리한다.</div>
+                    <ul>
+                        <li>본인의 사직 의사 표시에 따른 퇴직</li>
+                        <li>근로계약 기간의 만료</li>
+                        <li>사망</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 30 조 (사직)</div>
+                <div class="article-content">
+                    <div>① 퇴사를 희망하는 직원은 퇴사일 1개월 전에 회사에 서면으로 통지하고, 성실히 업무를 인수인계하여야 한다.</div>
+                    <div>② 수습 기간 중인 경우 퇴사일 1주 전까지 통지한다.</div>
+                    <div>③ 직원이 전항의 통지 기간을 준수하지 아니하거나 인수인계를 해태한 경우, 이로 인하여 회사에 발생한 손해에 대하여 배상 책임을 진다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 31 조 (해고)</div>
+                <div class="article-content">
+                    <div>① 회사는 직원에게 정당한 사유가 있는 경우에 한하여 해고할 수 있다.</div>
+                    <div>② 해고 시 적어도 30일 전에 예고하거나, 30일분의 통상임금을 지급한다. 단, 근로기간이 3개월 미만인 자는 예외로 한다.</div>
+                    <div>③ 해고 사유와 해고 시기는 서면(종이 문서)으로 통지한다. 서면통지를 하지 않은 해고는 효력이 없다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 32 조 (업무 인수인계 및 자산 반납)</div>
+                <div class="article-content">
+                    <div>① 퇴직하는 직원은 담당 업무를 후임자 또는 상급자에게 성실히 인수인계하여야 한다.</div>
+                    <div>② 회사가 제공한 업무용 장비(노트북, 모니터 등)는 퇴직일에 반납하며, 업무용 계정 및 데이터 접근 권한은 퇴직일자로 종료한다.</div>
+                    <div>③ 퇴직 시 모든 업무 관련 데이터(소스코드, 문서, 디자인 파일 등)를 회사에 반환하고 개인 보유분을 완전히 삭제하여야 한다.</div>
+                    <div>④ 직원은 퇴직 시 업무 자료 반환 및 비밀유지 확인서에 서명한다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 32 조의2 (업무용 장비 및 데이터 관리)</div>
+                <div class="article-content">
+                    <div>① 회사가 지급한 업무용 장비는 업무 목적으로만 사용하며, 회사의 승인 없이 소프트웨어를 설치하거나 보안 설정을 변경할 수 없다.</div>
+                    <div>② 직원은 업무 관련 데이터를 개인 기기, 개인 클라우드 저장소, 개인 이메일 등으로 전송하거나 복사하여서는 아니 된다.</div>
+                    <div>③ 회사는 업무용 장비에 대한 보안 관리를 실시할 수 있으며, 직원은 이에 협조한다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 제8장 퇴직급여 -->
+        <div class="chapter">
+            <div class="chapter-title">제 8 장 퇴직급여</div>
+
+            <div class="article">
+                <div class="article-title">제 33 조 (퇴직급여)</div>
+                <div class="article-content">
+                    <div>① 1년 이상 계속 근로한 직원이 퇴직하는 경우 근로자퇴직급여 보장법에 따라 퇴직급여를 지급한다.</div>
+                    <div>② 퇴직급여 제도의 세부 사항은 관련 법령에 따른다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 제9장 표창 및 징계 -->
+        <div class="chapter">
+            <div class="chapter-title">제 9 장 표창 및 징계</div>
+
+            <div class="article">
+                <div class="article-title">제 34 조 (표창)</div>
+                <div class="article-content">
+                    회사는 업무 성과가 우수하거나 회사 발전에 현저한 공로가 있는 직원에 대하여 표창할 수 있다.
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 35 조 (징계 사유)</div>
+                <div class="article-content">
+                    <div>직원이 다음 각 호에 해당하는 경우 징계할 수 있다.</div>
+                    <ul>
+                        <li>정당한 사유 없는 무단결근 또는 반복적 지각</li>
+                        <li>업무태만 또는 업무지시 불이행</li>
+                        <li>비밀유지 의무 위반</li>
+                        <li>회사 자산의 고의적 훼손 또는 사적 사용</li>
+                        <li>직장 내 괴롭힘 또는 성희롱</li>
+                        <li>개인정보 보호법 위반</li>
+                        <li>겸업·경업 제한 위반</li>
+                        <li>기타 본 규칙 및 회사 질서를 현저히 위반하는 행위</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 36 조 (징계의 종류)</div>
+                <div class="article-content">
+                    <div>징계의 종류는 다음과 같다.</div>
+                    <ul>
+                        <li><strong>경고</strong> : 서면으로 경고하고 시정을 촉구한다.</li>
+                        <li><strong>감봉</strong> : 1회 평균임금 1일분의 2분의 1 이내, 총액이 월 임금의 10분의 1 이내에서 감급한다.</li>
+                        <li><strong>정직</strong> : 일정 기간(1개월 이내) 출근을 정지하고 그 기간 중 임금을 지급하지 아니한다.</li>
+                        <li><strong>해고</strong> : 근로관계를 종료한다.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 37 조 (징계 절차)</div>
+                <div class="article-content">
+                    <div>① 징계 처분 전 해당 직원에게 소명의 기회를 부여한다.</div>
+                    <div>② 징계 사유, 징계 종류, 징계 시기를 서면으로 통지한다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 제10장 직장 내 괴롭힘 금지 -->
+        <div class="chapter">
+            <div class="chapter-title">제 10 장 직장 내 괴롭힘 금지</div>
+
+            <div class="article">
+                <div class="article-title">제 38 조 (금지 행위)</div>
+                <div class="article-content">
+                    회사 또는 직원은 직장에서의 지위 또는 관계 등의 우위를 이용하여 업무상 적정 범위를 넘어 다른 직원에게 신체적·정신적 고통을 주거나 근무환경을 악화시키는 행위를 하여서는 아니 된다.
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 39 조 (신고 및 조치)</div>
+                <div class="article-content">
+                    <div>① 직장 내 괴롭힘 발생 사실을 알게 된 경우 누구든지 회사에 신고할 수 있다.</div>
+                    <div>② 회사는 신고 접수일로부터 14일 이내에 조사에 착수하고, 조사 개시일로부터 30일 이내에 조사를 완료한다.</div>
+                    <div>③ 조사 기간 동안 피해자의 요청이 있는 경우 근무 장소의 변경, 유급휴가 부여 등 적절한 조치를 취한다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 40 조 (비밀 유지)</div>
+                <div class="article-content">
+                    직장 내 괴롭힘 사건의 조사 및 처리 과정에 참여한 자는 그 과정에서 알게 된 비밀을 누설하여서는 아니 된다.
+                </div>
+            </div>
+        </div>
+
+        <!-- 제11장 직장 내 성희롱 예방 -->
+        <div class="chapter">
+            <div class="chapter-title">제 11 장 직장 내 성희롱 예방</div>
+
+            <div class="article">
+                <div class="article-title">제 41 조 (성희롱 금지)</div>
+                <div class="article-content">
+                    직장 내에서 지위를 이용하거나 업무와 관련하여 성적 언동 등으로 성적 굴욕감 또는 혐오감을 느끼게 하거나, 성적 언동 등을 조건으로 고용상의 불이익을 주는 행위를 하여서는 아니 된다.
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 42 조 (성희롱 예방교육)</div>
+                <div class="article-content">
+                    <div>① 회사는 연 1회 이상 전 직원을 대상으로 직장 내 성희롱 예방교육을 실시한다.</div>
+                    <div>② 교육 내용에는 성희롱 관련 법령, 처리 절차, 피해자 보호 조치 등을 포함한다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 43 조 (성희롱 발생 시 조치)</div>
+                <div class="article-content">
+                    <div>① 직장 내 성희롱 발생 사실을 알게 된 경우 누구든지 회사에 신고할 수 있다.</div>
+                    <div>② 회사는 신고 접수 시 지체 없이 조사를 실시하고, 피해자 보호를 위한 적절한 조치를 취한다.</div>
+                    <div>③ 성희롱 행위가 확인된 경우 제35조에 따라 징계한다.</div>
+                    <div>④ 피해자에게 불이익한 처우를 하여서는 아니 된다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 제12장 비밀유지 및 지식재산권 -->
+        <div class="chapter">
+            <div class="chapter-title">제 12 장 비밀유지 및 지식재산권</div>
+
+            <div class="article">
+                <div class="article-title">제 44 조 (비밀유지)</div>
+                <div class="article-content">
+                    <div>① 직원은 재직 중 및 퇴직 후에도 업무상 취득한 회사의 영업비밀, 고객정보, 기술정보 등 일체의 기밀사항을 제3자에게 누설하거나 업무 외 목적으로 사용하여서는 아니 된다.</div>
+                    <div>② 직원은 업무상 취급하는 고객 및 회사의 개인정보를 개인정보 보호법에 따라 처리하며, 위반 시 관련 법령에 따른 책임을 진다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 45 조 (지식재산권)</div>
+                <div class="article-content">
+                    직원이 업무 수행 과정에서 창출한 발명, 저작물, 소프트웨어, 디자인 등 지식재산은 회사에 귀속한다. 단, 직무발명에 해당하는 경우 발명진흥법에 따라 정당한 보상을 한다.
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 46 조 (겸업·경업 제한)</div>
+                <div class="article-content">
+                    <div>① 직원은 회사의 사전 서면 승인 없이 타 업체에 고용되거나 경쟁 관계에 있는 사업을 영위할 수 없다.</div>
+                    <div>② 회사의 업무에 지장이 없고 영업비밀 침해가 없는 범위의 활동은 사전 신고 후 허용할 수 있다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 제13장 보칙 -->
+        <div class="chapter">
+            <div class="chapter-title">제 13 장 보 칙</div>
+
+            <div class="article">
+                <div class="article-title">제 47 조 (통지 방법)</div>
+                <div class="article-content">
+                    <div>① 본 규칙에서 정하는 통지는 서면, 이메일, 또는 회사가 지정한 업무용 메신저를 통해 할 수 있으며, 수신 확인이 가능한 방법으로 전달한다.</div>
+                    <div>② 통지가 발송된 후 7일이 경과하면 상대방이 이를 확인한 것으로 간주한다.</div>
+                    <div>③ 단, 해고 통지는 반드시 종이 서면으로 발행하여야 한다.</div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 48 조 (재해보상)</div>
+                <div class="article-content">
+                    직원이 업무상 부상 또는 질병에 걸린 경우에는 산업재해보상보험법에 따라 보상한다.
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">제 49 조 (규칙의 변경)</div>
+                <div class="article-content">
+                    <div>① 본 규칙의 변경이 필요한 경우 근로기준법에 따라 직원 과반수의 의견을 청취한 후 변경한다.</div>
+                    <div>② 직원에게 불리하게 변경하는 경우 직원 과반수의 동의를 받아야 한다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 부칙 -->
+        <div class="chapter">
+            <div class="chapter-title">부 칙</div>
+
+            <div class="article">
+                <div class="article-content">
+                    <div>제 1 조 (시행일) 본 규칙은 2026년 4월 1일부터 시행한다.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            루쿠쿠 주식회사 | 사업자등록번호 675-86-02806 | 대표이사 이동욱
+        </div>
+    </div>
+</body>
+</html>
